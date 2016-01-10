@@ -82,5 +82,6 @@ test:
 production:
   <<: *default
   database: edU_production
-  username: edU
-  password: <%= ENV['EDU_DATABASE_PASSWORD'] %>
+  username: postgresql
+  password: <%= ENV['GoDukes!621'] %>
+  prepared_statements: false
