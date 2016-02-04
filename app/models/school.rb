@@ -3,7 +3,7 @@ class School < ActiveRecord::Base
 	# Will add admin privilege so schools cannot
 	# be created, deleted, or edited without
 	# admin credentials.
-	def newSchool
+	def schoolInfo
 		name = gets
 		gpa = gets
 		sat = gets
@@ -15,16 +15,32 @@ class School < ActiveRecord::Base
 	end
 
 	# Save school info to the db
-	def saveSchool(newSchool)
-		school = School.create(name: newSchool.name,
-			gpa: newSchool.gpa,
-			sat: newSchool.sat,
-			act: newSchool.act,
-			location: newSchool.location,
-			population: newSchool.population,
-			social_life: newSchool.social_life,
-			athletics: newSchool.athletics)
+	def saveSchool(schoolInfo)
+		school = School.create(name: schoolInfo.name,
+			gpa: schoolInfo.gpa,
+			sat: schoolInfo.sat,
+			act: schoolInfo.act,
+			location: schoolInfo.location,
+			population: schoolInfo.population,
+			social_life: schoolInfo.social_life,
+			athletics: schoolInfo.athletics)
 	end
+
+	# Update school and save edited info to db
+	def updateSchool(updatedSchool)
+		updatedSchool = gets
+		school = School.find_by(name: updatedSchool)
+		school.update(name: schoolInfo.name,
+			gpa: schoolInfo.gpa,
+			sat: schoolInfo.sat,
+			act: schoolInfo.act,
+			location: schoolInfo.location,
+			population: schoolInfo.population,
+			social_life: schoolInfo.social_life,
+			athletics: schoolInfo.athletics)
+		school.save
+	end
+
 
 	# Delete school from db
 	def deleteSchool(schoolName)
