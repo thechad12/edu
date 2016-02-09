@@ -1,0 +1,33 @@
+<h1>Create User</h1>
+
+<%= form_for :user do |f| %>
+	<p>
+		<%= f.label :name %><br/>
+		<%= f.text_field :name %>
+
+		<%= f.label :gpa %><br/>
+		<%= f.text_field :gpa %>
+
+		<%= f.label :sat %><br/>
+		<%= f.text_field :sat %>
+
+		<%= f.label :act %><br/>
+		<%= f.text_field :act %>
+
+		<%= f.label :location %><br/>
+		<%= f.text_field :location %>
+
+		<%= f.label :population %><br/>
+		<%= f.text_field :population %>
+
+		<%= f.label :social_life %><br/>
+		<%= f.text_field :social_life %>
+
+		<%= f.label :athletics %><br/>
+		<%= f.text_field :athletics %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
