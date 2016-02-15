@@ -1,6 +1,7 @@
-<h1>Create User</h1>
+<h1>Create New School</h1>
+<h3>Admins only</h3>
 
-<%= form_for :user, url: users_path do |f| %>
+<%= form_for :school, url: schools_path do |f| %>
 	<p>
 		<%= f.label :name %><br/>
 		<%= f.text_field :name %>
@@ -26,7 +27,6 @@
 		<%= f.label :athletics %><br/>
 		<%= f.text_field :athletics %>
 	</p>
-
 	<p>
 		<%= f.submit %>
 	</p>
