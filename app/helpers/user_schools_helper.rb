@@ -1,0 +1,2 @@
+module UserSchoolsHelper
+end

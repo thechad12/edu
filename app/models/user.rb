@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :school
 
 	# Gets the info from the user
 	def userInfo
@@ -46,5 +47,21 @@ class User < ActiveRecord::Base
 		user = User.find_by(name: username)
 		user.destroy
 	end
+	# Returns a list of schools where student's profile matches the school's averages
+	def targets
+		@user = current_user
+		@school = School.where(user_info: ())
+	end
 
+	# Returns list of schools where student's profile is below school's averages, but close
+	def reaches
+		@user = current_user
+		@school = School.where(user_info: ())
+	end
+
+	# Returns a list of schools where student's profile is above school's averages
+	def safety
+		@user = current_user
+		@school = School.where(user_info: ())
+	end
 end

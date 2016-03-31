@@ -1,4 +1,5 @@
 class School < ActiveRecord::Base
+	belongs_to :user
 	# Create new school
 	# Will add admin privilege so schools cannot
 	# be created, deleted, or edited without
