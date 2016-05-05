@@ -78,11 +78,11 @@ test:
 # You can use this database configuration with:
 #
 #   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+#     url: <%= ENV['DATABASE_URL'] %>s
 #
 production:
   <<: *default
   database: edU_production
   username: postgresql
-  password: <%= ENV['Base64.decode(R29EdWtlcyE2MjE=)'] %>
+  password: <%= ENV['DATABASE_URL'] %>
   prepared_statements: false

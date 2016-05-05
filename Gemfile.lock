@@ -66,6 +66,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.0)
+    cowsay (0.2.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
@@ -94,6 +95,10 @@ GEM
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
+    puma (3.4.0)
+    puma-rails (0.0.2)
+      puma
+      rack
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -173,9 +178,11 @@ DEPENDENCIES
   capistrano-rails-console
   capistrano-rbenv
   coffee-rails (~> 4.1.0)
+  cowsay
   jbuilder (~> 2.0)
   jquery-rails
   pg
+  puma-rails (~> 0.0.2)
   rails (= 4.2.4)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
