@@ -80,9 +80,9 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>s
 #
-production:
-  <<: *default
-  database: edU_production
-  username: postgresql
-  password: <%= ENV['DATABASE_URL'] %>
-  prepared_statements: false
+#production:
+#  <<: *default
+#  database: edU_production
+#  username: postgresql
+#  password: <%= ENV['DATABASE_URL'] %>
+#  prepared_statements: false
