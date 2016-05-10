@@ -1,30 +1,30 @@
 # config valid only for current version of Capistrano
-lock '3.4.0'
+#lock '3.4.0'
 
 
-set :application, 'edu'
+#set :application, 'edu'
+#
+#set :repositorym 'git@thechad12.git:/thechad12/edu.git'
+#set :scm, :git
+#set :branch, "master"
+#set :format, 		:pretty
+#set :log_level,		:debug
 
-set :repositorym 'git@thechad12.git:/thechad12/edu.git'
-set :scm, :git
-set :branch, "master"
-set :format, 		:pretty
-set :log_level,		:debug
+#set :rbenv_ruby, '2.1.0'
 
-set :rbenv_ruby, '2.1.0'
+#server 'localhost:5432', user: 'localhost', roles: %w(web app db)
+#namespace :deploy do
+#	desc 'Restart application'
+#	task :restart do
+#		on roles(:app), in :sequence wait: 5 do
+#			execute :mkdir, '-p', "#{release_path}/tmp"
+#			execute :touch, release_path.join('tmp/restart.txt')
+#	end
+#end
 
-server 'localhost:5432', user: 'localhost', roles: %w(web app db)
-namespace :deploy do
-	desc 'Restart application'
-	task :restart do
-		on roles(:app), in :sequence wait: 5 do
-			execute :mkdir, '-p', "#{release_path}/tmp"
-			execute :touch, release_path.join('tmp/restart.txt')
-	end
-end
+#after :publishing, :restart
 
-after :publishing, :restart
-
-after :restart, :clear_cache do
+#after :restart, :clear_cache do
 #set :repo_url, 'git@thechad12.git:/thechad12/edu.git'
 #set :scm_passphrase, ""
 #set :user, "edu"
@@ -61,15 +61,15 @@ after :restart, :clear_cache do
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-namespace :deploy do
+#namespace :deploy do
 
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
+#  after :restart, :clear_cache do
+#    on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
       # within release_path do
       #   execute :rake, 'cache:clear'
       # end
-    end
-  end
+#   end
+#  end
 
-end
+#end
